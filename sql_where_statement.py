@@ -27,3 +27,17 @@ result2 = cursor.fetchall()
 for i in result2:
     print(i)
 
+
+########### preventing SQL Injection ############
+## sql injection is a web hack technique... to prevent it >> 
+# when query values are provided by the users we have to escape the values
+# mysql.connector has the escape query values
+print("\n sql injection--outputs----------")
+query3 = "SELECT * FROM customers WHERE address = %s"
+adr = ('Highway 21',)
+
+cursor.execute(query3, adr)
+result3 = cursor.fetchall()
+
+for i in result3:
+    print(i)
