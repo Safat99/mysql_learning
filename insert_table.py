@@ -22,7 +22,7 @@ query2 = "INSERT INTO customers (name, address) VALUES (%s, %s)"
 val2 =[
     ('Zia', 'Dortmund 2nd street'),
     ('Zayed', '23rd street Mohakhali DOHS'),
-    ('Zunayed', 'xyz steet Dhaka 1000')
+    ('Zunayed', 'xyz street Dhaka 1000')
 ]
 
 cursor.executemany(query2, val2)
