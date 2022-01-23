@@ -10,3 +10,4 @@ mydb = sql.connect(
 cursor = mydb.cursor()
 
 cursor.execute("CREATE TABLE customers (name VARCHAR(20), address VARCHAR(100))")
+cursor.close()
